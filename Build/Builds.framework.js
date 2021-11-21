@@ -1284,7 +1284,7 @@ function _emscripten_asm_const_ii(code, a0) {
  return ASM_CONSTS[code](a0);
 }
 STATIC_BASE = GLOBAL_BASE;
-STATICTOP = STATIC_BASE + 3065088;
+STATICTOP = STATIC_BASE + 3065168;
 __ATINIT__.push({
  func: (function() {
   __GLOBAL__sub_I_AccessibilityScriptingClasses_cpp();
@@ -3310,7 +3310,7 @@ __ATINIT__.push({
   ___emscripten_environ_constructor();
  })
 });
-var STATIC_BUMP = 3065088;
+var STATIC_BUMP = 3065168;
 Module["STATIC_BASE"] = STATIC_BASE;
 Module["STATIC_BUMP"] = STATIC_BUMP;
 var tempDoublePtr = STATICTOP;
@@ -4180,6 +4180,14 @@ function _PostJSON(path, value, objectName, callback, fallback) {
  } catch (error) {
   unityInstance.Module.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
  }
+}
+function _PrintToAlert(value) {
+ var parsedValue = Pointer_stringify(value);
+ window.alert(parsedValue);
+}
+function _PrintToConsole(value) {
+ var parsedValue = Pointer_stringify(value);
+ console.log(parsedValue);
 }
 function _PushJSON(path, value, objectName, callback, fallback) {
  var parsedPath = Pointer_stringify(path);
@@ -21033,6 +21041,8 @@ Module.asmLibraryArg = {
  "_ModifyNumberWithTransaction": _ModifyNumberWithTransaction,
  "_OnAuthStateChanged": _OnAuthStateChanged,
  "_PostJSON": _PostJSON,
+ "_PrintToAlert": _PrintToAlert,
+ "_PrintToConsole": _PrintToConsole,
  "_PushJSON": _PushJSON,
  "_RemoveElementInArrayField": _RemoveElementInArrayField,
  "_SetDocument": _SetDocument,

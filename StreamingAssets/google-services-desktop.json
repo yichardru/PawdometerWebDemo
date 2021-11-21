@@ -1,37 +1,83 @@
 {
+  "project_info": {
+    "project_number": "1093598671684",
+    "firebase_url": "https://thunkable-3c1e0.firebaseio.com",
+    "project_id": "thunkable-3c1e0",
+    "storage_bucket": "thunkable-3c1e0.appspot.com"
+  },
   "client": [
     {
-      "services": {
-        "appinvite_service": {
-          "status": 1
-        }, 
-        "analytics_service": {
-          "status": 0
-        }
-      }, 
-      "oauth_client": [
-        {
-          "client_id": "1093598671684-92c8b96c8gbc7noee8utoe2cssjg2r3f.apps.googleusercontent.com"
-        }
-      ], 
-      "api_key": [
-        {
-          "current_key": "AIzaSyBJe9Kl0BoBCTKXFJjvZrumWDPT8VDUDVw"
-        }
-      ], 
       "client_info": {
-        "mobilesdk_app_id": "1:1093598671684:ios:4c65dcd35e10ccf4e5dd11", 
+        "mobilesdk_app_id": "1:1093598671684:android:ece4d82dfac51e36e5dd11",
         "android_client_info": {
           "package_name": "com.Pawdometer.MatchProject"
         }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1093598671684-hmo29h0rj2t9q82juh5850au3dg35r3u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCD9sqZEAatCAGf_XViycTOyJyabvLRZI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1093598671684-hmo29h0rj2t9q82juh5850au3dg35r3u.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1093598671684-92c8b96c8gbc7noee8utoe2cssjg2r3f.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.Pawdometer.MatchProject"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1093598671684:android:cfef38116b71842fe5dd11",
+        "android_client_info": {
+          "package_name": "com.Pawdometer.MatchtheDogs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1093598671684-hmo29h0rj2t9q82juh5850au3dg35r3u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCD9sqZEAatCAGf_XViycTOyJyabvLRZI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1093598671684-hmo29h0rj2t9q82juh5850au3dg35r3u.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1093598671684-92c8b96c8gbc7noee8utoe2cssjg2r3f.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.Pawdometer.MatchProject"
+              }
+            }
+          ]
+        }
       }
     }
-  ], 
-  "configuration_version": "1", 
-  "project_info": {
-    "storage_bucket": "thunkable-3c1e0.appspot.com", 
-    "project_id": "thunkable-3c1e0", 
-    "firebase_url": "https://thunkable-3c1e0.firebaseio.com", 
-    "project_number": "1093598671684"
-  }
+  ],
+  "configuration_version": "1"
 }
