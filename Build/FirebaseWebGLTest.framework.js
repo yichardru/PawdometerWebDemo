@@ -1284,7 +1284,7 @@ function _emscripten_asm_const_ii(code, a0) {
  return ASM_CONSTS[code](a0);
 }
 STATIC_BASE = GLOBAL_BASE;
-STATICTOP = STATIC_BASE + 3065168;
+STATICTOP = STATIC_BASE + 3065232;
 __ATINIT__.push({
  func: (function() {
   __GLOBAL__sub_I_AccessibilityScriptingClasses_cpp();
@@ -3310,7 +3310,7 @@ __ATINIT__.push({
   ___emscripten_environ_constructor();
  })
 });
-var STATIC_BUMP = 3065168;
+var STATIC_BUMP = 3065232;
 Module["STATIC_BASE"] = STATIC_BASE;
 Module["STATIC_BUMP"] = STATIC_BUMP;
 var tempDoublePtr = STATICTOP;
@@ -3505,6 +3505,13 @@ function _GetJSON(path, objectName, callback, fallback) {
  } catch (error) {
   unityInstance.Module.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
  }
+}
+function _GetUser() {
+ const user = firebase.auth().currentUser;
+ if (user !== null) {
+  return user.displayName;
+ }
+ return "";
 }
 function _IncrementFieldValue(collectionPath, documentId, field, increment, objectName, callback, fallback) {
  var parsedPath = Pointer_stringify(collectionPath);
@@ -20981,6 +20988,7 @@ Module.asmLibraryArg = {
  "_GetDocument": _GetDocument,
  "_GetDocumentsInCollection": _GetDocumentsInCollection,
  "_GetJSON": _GetJSON,
+ "_GetUser": _GetUser,
  "_IncrementFieldValue": _IncrementFieldValue,
  "_JS_Cursor_SetImage": _JS_Cursor_SetImage,
  "_JS_Cursor_SetShow": _JS_Cursor_SetShow,
