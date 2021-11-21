@@ -23,13 +23,6 @@
         <div id="unity-build-title">Match the Dogs</div>
       </div>
     </div>
-    <script type="module">
-      // Import the functions you need from the SDKs you need
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
-      // https://firebase.google.com/docs/web/setup#available-libraries
-      import { getAuth } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-auth.js"
-      import { getDatabase } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-database.js"
-    </script>
     <script>
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
@@ -124,21 +117,30 @@
         });
       };
       document.body.appendChild(script);
-
-      // Your web app's Firebase configuration
-      const firebaseConfig = {
-        apiKey: "AIzaSyA0gfdODFyCIVDntjvYsFKu_vxuhDadwWE",
-        authDomain: "thunkable-3c1e0.firebaseapp.com",
-        databaseURL: "https://thunkable-3c1e0.firebaseio.com",
-        projectId: "thunkable-3c1e0",
-        storageBucket: "thunkable-3c1e0.appspot.com",
-        messagingSenderId: "1093598671684",
-        appId: "1:1093598671684:web:727e311366b85258e5dd11"
-      };
-
-      // Initialize Firebase
-      const firebase = initializeApp(firebaseConfig);
-    </script>
-    
+    </script> 
   </body>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+    import { getAuth } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-auth.js"
+    import { getDatabase } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-database.js";
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyA0gfdODFyCIVDntjvYsFKu_vxuhDadwWE",
+      authDomain: "thunkable-3c1e0.firebaseapp.com",
+      databaseURL: "https://thunkable-3c1e0.firebaseio.com",
+      projectId: "thunkable-3c1e0",
+      storageBucket: "thunkable-3c1e0.appspot.com",
+      messagingSenderId: "1093598671684",
+      appId: "1:1093598671684:web:727e311366b85258e5dd11"
+    };
+  
+    // Initialize Firebase
+    const firebase = initializeApp(firebaseConfig);
+    const auth = getAuth();
+    const database = getDatabase(firebase);
+  </script>
 </html>
