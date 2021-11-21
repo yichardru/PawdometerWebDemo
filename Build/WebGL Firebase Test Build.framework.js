@@ -4181,6 +4181,14 @@ function _PostJSON(path, value, objectName, callback, fallback) {
   unityInstance.Module.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
  }
 }
+function _PrintToAlert(value) {
+ var parsedValue = Pointer_stringify(value);
+ window.alert(parsedValue);
+}
+function _PrintToConsole(value) {
+ var parsedValue = Pointer_stringify(value);
+ console.log(parsedValue);
+}
 function _PushJSON(path, value, objectName, callback, fallback) {
  var parsedPath = Pointer_stringify(path);
  var parsedValue = Pointer_stringify(value);
@@ -21033,6 +21041,8 @@ Module.asmLibraryArg = {
  "_ModifyNumberWithTransaction": _ModifyNumberWithTransaction,
  "_OnAuthStateChanged": _OnAuthStateChanged,
  "_PostJSON": _PostJSON,
+ "_PrintToAlert": _PrintToAlert,
+ "_PrintToConsole": _PrintToConsole,
  "_PushJSON": _PushJSON,
  "_RemoveElementInArrayField": _RemoveElementInArrayField,
  "_SetDocument": _SetDocument,
