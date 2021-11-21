@@ -23,6 +23,13 @@
         <div id="unity-build-title">Match the Dogs</div>
       </div>
     </div>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
+      // https://firebase.google.com/docs/web/setup#available-libraries
+      import { getAuth } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-auth.js"
+      import { getDatabase } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-database.js"
+    </script>
     <script>
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
@@ -117,11 +124,6 @@
         });
       };
       document.body.appendChild(script);
-      // Import the functions you need from the SDKs you need
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
-      // https://firebase.google.com/docs/web/setup#available-libraries
-      import { getAuth } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-auth.js"
-      import { getDatabase } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-database.js"
 
       // Your web app's Firebase configuration
       const firebaseConfig = {
