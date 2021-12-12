@@ -3500,6 +3500,7 @@ function _GetJSON(path, objectName, callback, fallback) {
  var parsedFallback = Pointer_stringify(fallback);
  try {
   firebase.database().ref(parsedPath).once("value").then((function(snapshot) {
+   console.log(JSON.stringify(snapshot.val()));
    unityInstance.Module.SendMessage(parsedObjectName, parsedCallback, JSON.stringify(snapshot.val()));
   }));
  } catch (error) {
