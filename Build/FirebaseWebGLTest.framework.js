@@ -4183,11 +4183,13 @@ function _PostJSON(path, value, objectName, callback, fallback) {
  var parsedObjectName = Pointer_stringify(objectName);
  var parsedCallback = Pointer_stringify(callback);
  var parsedFallback = Pointer_stringify(fallback);
+ window.alert("Posting JSON info on " + parsedPath + " with value " + parsedValue);
  try {
   firebase.database().ref(parsedPath).set(JSON.parse(parsedValue)).then((function(unused) {
    unityInstance.Module.SendMessage(parsedObjectName, parsedCallback, "Success: " + parsedValue + " was posted to " + parsedPath);
   }));
  } catch (error) {
+  window.alert(JSON.stringify(error, Object.getOwnPropertyNames(error)));
   unityInstance.Module.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
  }
 }
