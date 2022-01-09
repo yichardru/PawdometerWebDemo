@@ -1,1 +1,1 @@
-# FirebaseWebGLTest
+# Pawdometer Web Demo
